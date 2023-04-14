@@ -13,20 +13,21 @@ import FormControl from "@mui/material/FormControl";
 import nayon from "../assets/images/nayon.jpg";
 import Image1 from "../assets/images/Image1.png";
 import fbIcon from "../assets/images/fbIcon.png";
-import logo from "../assets/images/logo4.png";
+// import logo from "../assets/images/logo4.png";
 import work1 from "../assets/images/work1.jpg";
 import work2 from "../assets/images/work2.jpg";
 import work3 from "../assets/images/work3.jpg";
 import work4 from "../assets/images/work4.jpg";
 import Consulting from "../assets/client-logos/Consulting.svg";
 import creative from "../assets/client-logos/creative.svg";
-import DigitalCustomerExperience from "../assets/client-logos/DigitalCustomerExperience.svg";
+import DigitalCustomerExperience from "../assets/client-logos/DigitalCustomerExperience2.svg";
 import ecommerce from "../assets/client-logos/ecommerce.svg";
-import marketing from "../assets/client-logos/marketing.svg";
+import marketing from "../assets/client-logos/marketing2.svg";
 import Sales from "../assets/client-logos/Sales.svg";
 import softwaredevelopment from "../assets/client-logos/softwaredevelopment.svg";
 import Startups from "../assets/client-logos/Startups.svg";
 import TalentManagement from "../assets/client-logos/TalentManagement.svg";
+import logo from "../assets/client-logos/logo.svg";
 import NewrozImage from "../assets/images/NewrozImage.png";
 import PaymentIntegration from "../assets/images/Payment-Integration.png";
 import homeBackground from "../assets/images/homeBackground.png";
@@ -655,6 +656,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#061A38",
     cursor: "pointer",
     background: "#22092b",
+    display: "inline-block",
     [theme.breakpoints.down("md")]: {
       fontSize: "16px",
     },
@@ -695,7 +697,7 @@ const useStyles = makeStyles((theme) => ({
   sectionPaddingAllSide: {
     padding: "50px",
     [theme.breakpoints.down("xl")]: {
-      padding: "50px 200px",
+      padding: "50px 100px",
     },
     [theme.breakpoints.down("lg")]: {
       padding: "50px",
@@ -907,27 +909,6 @@ const Home = () => {
 
       // "Mentoring, Maintain quality and ensure responsiveness of applications.",
     },
-    // {
-    //   designation: "Strategy & Direction",
-    //   duration: "March 2020 - Present",
-    //   company: "ABCD Tech Ltd.",
-    //   detail:
-    //     "Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
-    // {
-    //   designation: "Strategy & Direction",
-    //   duration: "March 2020 - Present",
-    //   company: "ABCD Tech Ltd.",
-    //   detail:
-    //     "Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
-    // {
-    //   designation: "Strategy & Direction",
-    //   duration: "March 2020 - Present",
-    //   company: "ABCD Tech Ltd.",
-    //   detail:
-    //     "Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Understand First. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
   ];
   const educationData = [
     {
@@ -992,6 +973,13 @@ const Home = () => {
         setActive(id);
       }, 1500);
     }
+  };
+
+  const hideIcon = () => {
+    document.getElementById("myIcon").style.display = "block";
+  };
+  const ShowIcon = () => {
+    document.getElementById("myIcon").style.display = "none";
   };
 
   useEffect(() => {
@@ -1089,17 +1077,17 @@ const Home = () => {
           >
             <Grid item xs={6} sm={3}>
               <Grid container alignItems="center">
-                <Grid item>
-                  {/* <img src={logo} alt="" height="40px" /> */}
-                </Grid>
                 <Grid item onClick={() => fnActive("Home")}>
+                  <img src={logo} alt="" height="70px" />
+                </Grid>
+                {/* <Grid item onClick={() => fnActive("Home")}>
                   <p
                     className={classes.BrandNameStyle}
                     style={{ color: "#22092b" }}
                   >
                     oho
                   </p>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Grid>
             <Grid item sm={9} className={classes.ForOtherVersion}>
@@ -1111,7 +1099,7 @@ const Home = () => {
                   }`}
                   onClick={() => fnActive("Home")}
                 >
-                  <h4 className={`${classes.menuItem}`}>Home</h4>
+                  <h4 className={`${classes.menuItem}`}>HOME</h4>
                 </Grid>
                 {/* <Grid
                   item
@@ -1126,21 +1114,21 @@ const Home = () => {
                 <Grid
                   item
                   className={`${classes.itemStyle} ${
-                    active === "Experience" ? classes.active : null
+                    active === "CLIENTS" ? classes.active : null
                   }`}
-                  onClick={() => fnActive("Experience")}
+                  onClick={() => fnActive("CLIENTS")}
                 >
-                  <p className={classes.menuItem}>Experience</p>
+                  <p className={classes.menuItem}>CLIENTS</p>
                 </Grid>
 
                 <Grid
                   item
                   className={`${classes.itemStyle} ${
-                    active === "My Works" ? classes.active : null
+                    active === "SERVICES" ? classes.active : null
                   }`}
-                  onClick={() => fnActive("My Works")}
+                  onClick={() => fnActive("SERVICES")}
                 >
-                  <p className={classes.menuItem}>My Works</p>
+                  <p className={classes.menuItem}>SERVICES</p>
                 </Grid>
                 {/* <Grid
                   item
@@ -1158,7 +1146,7 @@ const Home = () => {
                   }`}
                   onClick={() => fnActive("Contact")}
                 >
-                  <p className={classes.menuItem}>Contact</p>
+                  <p className={classes.menuItem}>CONTACT</p>
                 </Grid>
               </Grid>
             </Grid>
@@ -1202,7 +1190,7 @@ const Home = () => {
                         fontFamily: "'Inter', sans-serif",
                       }}
                     >
-                      TOP-RATED SALES ENABLEMENT PLATFORM
+                      #TOP-RATED SALES ENABLEMENT PLATFORM
                     </p>
                     <p
                       className={classes.h1}
@@ -1250,14 +1238,23 @@ const Home = () => {
                       Online Head Office today.
                     </p>
                     <Button
-                      endIcon={<ArrowForwardIcon />}
+                      endIcon={
+                        <ArrowForwardIcon
+                          id="myIcon"
+                          style={{ display: "none" }}
+                        />
+                      }
                       variant="contained"
                       disableElevation
                       style={{
                         borderRadius: "25px",
                         padding: "15px 40px",
                         textDecoration: "none",
+                        textTransform: "none",
+                        transition: "1s",
                       }}
+                      onMouseEnter={hideIcon}
+                      onMouseLeave={ShowIcon}
                     >
                       Collaborate with us
                     </Button>
@@ -1275,10 +1272,7 @@ const Home = () => {
             paddingRight: "0px",
           }}
         >
-          <section
-            id="Experience"
-            className={classes.sectionPaddingWithoutBottom}
-          >
+          <section id="CLIENTS" className={classes.sectionPaddingWithoutBottom}>
             <Grid
               container
               justifyContent="center"
@@ -1452,7 +1446,7 @@ const Home = () => {
             }}
           >
             <section
-              id="My Works"
+              id="SERVICES"
               className={classes.sectionPaddingWithoutBottom}
               style={{ background: "#FFE6C7" }}
             >
@@ -1923,68 +1917,93 @@ const Home = () => {
               className={classes.sectionPaddingAllSide}
               // style={{ background: "#FF4105" }}
             >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  display: "inline-block",
-                  letterSpacing: ".08em",
-                  color: "#22092b",
-                  // marginBottom: "30px",
-                  backgroundColor: "#fcd408",
-                  borderRadius: "0.8rem",
-                  padding: "0.8rem 1.6rem",
-                  fontFamily: "'Inter', sans-serif",
-                }}
-              >
-                Contact Us
-              </p>
-              <p
-                className={classes.h1}
-                style={{
-                  color: "#22092b",
-                  fontWeight: 600,
-                  fontSize: "30px",
-                  margin: "0 0 20px",
-                }}
-              >
-                We're here to help
-              </p>
               <div
                 className={classes.NotCard}
                 style={{ paddingTop: "0px", paddingBottom: "0px" }}
               >
-                <Grid container alignItems="center">
-                  <Grid item xs={6} sm={6}>
-                    <p
-                      className={`${classes.h5} ${classes.marginBottomStyle}`}
-                      style={{ color: "#fff" }}
+                <Grid container justifyContent="space-between">
+                  <Grid item xs={6} sm={6} style={{ padding: "0 80px" }}>
+                    <div
+                      style={{
+                        background: "#FA4105",
+                        padding: "30px 50px",
+                        borderRadius: "8px",
+                      }}
                     >
-                      Mirpur DOHS, Dhaka
-                    </p>
-                    <p
-                      className={`${classes.h5} ${classes.marginBottomStyle}`}
-                      style={{ color: "#fff" }}
-                    >
-                      Toll Free Sales
-                    </p>
-                    <p
-                      className={`${classes.h5} ${classes.marginBottomStyle}`}
-                      style={{ color: "#fff" }}
-                    >
-                      +880 19 357-0402
-                    </p>
-                    <Grid container alignItems="center">
-                      <div className={classes.iconDiv}>
-                        <FacebookIcon className={classes.iconStyle} />
+                      <p
+                        style={{
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          display: "inline-block",
+                          letterSpacing: ".08em",
+                          color: "#22092b",
+                          // marginBottom: "30px",
+                          backgroundColor: "#fcd408",
+                          borderRadius: "0.8rem",
+                          padding: "0.8rem 1.6rem",
+                          fontFamily: "'Inter', sans-serif",
+                        }}
+                      >
+                        Contact Us
+                      </p>
+                      <p
+                        className={classes.h1}
+                        style={{
+                          color: "#22092b",
+                          fontWeight: 600,
+                          fontSize: "32px",
+                          margin: "0 0 20px",
+                        }}
+                      >
+                        We're here to help
+                      </p>
+                      <div style={{ paddingLeft: "30px" }}>
+                        <p
+                          className={`${classes.h5} ${classes.marginBottomStyle}`}
+                          style={{ color: "#fff" }}
+                        >
+                          Mirpur DOHS, Dhaka
+                        </p>
+                        <p
+                          className={`${classes.h5} ${classes.marginBottomStyle}`}
+                          style={{ color: "#fff" }}
+                        >
+                          Toll Free Sales
+                        </p>
+                        <p
+                          className={`${classes.h5} ${classes.marginBottomStyle}`}
+                          style={{ color: "#fff" }}
+                        >
+                          +880 19 357-0402
+                        </p>
+                        <Grid container alignItems="center">
+                          <div className={classes.iconDiv}>
+                            <FacebookIcon className={classes.iconStyle} />
+                          </div>
+                          <div className={classes.iconDiv}>
+                            <InstagramIcon className={classes.iconStyle} />
+                          </div>
+                          <div className={classes.iconDiv}>
+                            <LinkedInIcon className={classes.iconStyle} />
+                          </div>
+                        </Grid>
                       </div>
-                      <div className={classes.iconDiv}>
-                        <InstagramIcon className={classes.iconStyle} />
-                      </div>
-                      <div className={classes.iconDiv}>
-                        <LinkedInIcon className={classes.iconStyle} />
-                      </div>
-                    </Grid>
+                    </div>
+
+                    <div style={{ marginTop: "20px", textAlign: "center" }}>
+                      <a
+                        className={classes.button2}
+                        href="/"
+                        // target="_blank"
+                        style={{
+                          textDecoration: "none",
+                          color: "#fff",
+                          border: "20px solid #FA4105",
+                        }}
+                      >
+                        Live Chat !
+                      </a>
+                    </div>
                   </Grid>
                   <Grid
                     item
@@ -1992,10 +2011,11 @@ const Home = () => {
                     sm={6}
                     className={classes.contactButtonBox}
                     data-aos="zoom-in"
+                    style={{ padding: "0 40px" }}
                   >
                     {/* <Fade right> */}
 
-                    <div>
+                    {/* <div>
                       <a
                         className={classes.button2}
                         href="/"
@@ -2004,18 +2024,19 @@ const Home = () => {
                       >
                         Live Chat !
                       </a>
-                    </div>
+                    </div> */}
                     {/* </Fade> */}
+                    <Email />
                     <br />
                     <br />
                   </Grid>
                 </Grid>
               </div>
-              <br />
+              {/* <br />
               <br />
               <br />
 
-              <Email />
+              <Email /> */}
             </section>
           </Container>
         </div>

@@ -26,7 +26,7 @@ import RahimSteel from "../assets/client-logos/RahimSteel.png";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    width: "120px",
+    width: "150px",
     margin: "10px auto",
     background: "#fff",
     padding: "10px 5px",
@@ -39,15 +39,15 @@ const useStyles = makeStyles((theme) => ({
   },
   cardTitle: {
     fontSize: "12px",
-    margin: "16px 0 0 0",
+    margin: "8px 0 20px 0",
     color: "#061A38",
     [theme.breakpoints.down("sm")]: {
       fontSize: "7px",
     },
   },
   cardImage: {
-    width: "110px",
-    height: "110px",
+    width: "90px",
+    height: "90px",
     display: "block",
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
@@ -60,15 +60,15 @@ const useStyles = makeStyles((theme) => ({
 const WhatIKnow = () => {
   const classes = useStyles();
   const data = [
-    { img: AppleGadgets, name: "HTML 5" },
-    { img: BangladeshAirForce, name: "CSS 3" },
-    { img: CDVision, name: ".NET" },
-    { img: ChitronInterior, name: "JavaScript" },
-    { img: HashtagPizza, name: "MS SQL Server" },
-    { img: InBs, name: "Material-UI" },
-    { img: NaveedMahbub, name: "React JS" },
-    { img: OceanAngelFreight, name: "MS Visual Studio" },
-    { img: RahimSteel, name: "Visual Studio Code" },
+    { img: AppleGadgets, name: "Apple Gadgets Ltd." },
+    { img: BangladeshAirForce, name: "Bangladesh Air Force" },
+    { img: CDVision, name: "CD Vision." },
+    { img: ChitronInterior, name: "Chitron Interior." },
+    { img: HashtagPizza, name: "Hashtag Pizza." },
+    { img: InBs, name: "InBs Ltd." },
+    { img: NaveedMahbub, name: "Naveed Mahbub Show." },
+    { img: OceanAngelFreight, name: "Ocean Angel Freight Ltd." },
+    { img: RahimSteel, name: "Rahim Steel." },
   ];
   const settings = {
     className: "center",
@@ -113,7 +113,7 @@ const WhatIKnow = () => {
           <div key={i}>
             <div className={classes.card}>
               <img src={item.img} alt="" className={classes.cardImage} />
-              {/* <p className={classes.cardTitle}>{item.name}</p> */}
+              <p className={classes.cardTitle}>{item.name}</p>
             </div>
           </div>
         ))}

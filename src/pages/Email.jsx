@@ -93,7 +93,7 @@ const Email = () => {
       style={{
         background: "#fff",
         maxWidth: "750px",
-        padding: "60px",
+        padding: "50px 50px 50px 50px",
         borderRadius: "8px",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         margin: "auto",
@@ -132,13 +132,13 @@ const Email = () => {
           fullWidth
           // rows={4}
         />
-        <br />
-        <br />
+
         {/* <textarea name="message" /> */}
         {/* <input className={classes.button2} type="submit" value="Submit" /> */}
         <div
           style={{
             textAlign: "center",
+            marginTop: "50px",
           }}
         >
           <Button
