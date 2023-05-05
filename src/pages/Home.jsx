@@ -654,7 +654,7 @@ const Home = () => {
     "Automate",
     "Track",
   ];
-  const onChange = visiblity => {
+  const onChange = (visiblity) => {
     setVisibility(visiblity);
   };
   const fnActive = (id) => {
@@ -1358,7 +1358,7 @@ const Home = () => {
 
         <div
           className={classes.themeBackground}
-          style={{ background: "#FF4105", paddingBottom: "60px" }}
+          style={{ background: "#FF4105" }}
         >
           <Container
             maxWidth="xl"
