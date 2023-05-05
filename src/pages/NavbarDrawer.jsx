@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer"; 
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import ListItemText from "@mui/material/ListItemText"; 
 import HomeIcon from "@mui/icons-material/Home";
 import { makeStyles } from "@mui/styles";
-import ContactsIcon from "@mui/icons-material/Contacts";
-import SchoolIcon from "@mui/icons-material/School";
+import ContactsIcon from "@mui/icons-material/Contacts"; 
 import AcUnitIcon from "@mui/icons-material/AcUnit";
-import GrainIcon from "@mui/icons-material/Grain";
-import SurfingIcon from "@mui/icons-material/Surfing";
-
+import GrainIcon from "@mui/icons-material/Grain"; 
+import logo from "../assets/client-logos/logo.svg";
 const useStyles = makeStyles((theme) => ({
   BrandNameStyle: {
     fontSize: "30px",
@@ -24,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     margin: 0,
 
-    color: "darkcyan",
+    color: "#ff4105",
+
     // [theme.breakpoints.down("xl")]: {
     //   fontSize: "45px",
     //   lineHeight: "65px",
@@ -33,12 +29,12 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiTypography-root": {
       fontSize: "13px",
       fontWeight: 500,
-      color: "darkcyan",
+      color: "#ff4105",
     },
   },
   active: {
     // background: "#5AFF8080 !important",
-    background: "#262D54 !important",
+    background: "#ff410520 !important",
     borderRadius: "10px !important",
   },
 }));
@@ -86,91 +82,62 @@ export default function NavbarDrawer({ openDrawer, fnActive, active }) {
           className={`${classes.itemStyle}   `}
           onClick={() => fnActive("Home")}
         >
-          <p className={`${classes.BrandNameStyle}`}>NAYON</p>
+          {/* <p className={`${classes.BrandNameStyle}`}>NAYON</p> */}
+          <img src={logo} alt="" height="50px" />
         </ListItem>
         <Divider />
         <br />
         <ListItem
           button
           className={`${classes.itemStyle}  ${
-            active === "Home" ? classes.active : null
+            active === "HOME" ? classes.active : null
           }`}
-          onClick={() => fnActive("Home")}
+          onClick={() => fnActive("HOME")}
         >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
+          <ListItemIcon style={{ color: "#ff4105", minWidth: "35px" }}>
             <HomeIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText className={`${classes.menuItem}`}>Home</ListItemText>
+          <ListItemText className={`${classes.menuItem}`}>HOME</ListItemText>
         </ListItem>
-
-        {/* <ListItem
-          button
-          className={`${classes.itemStyle} ${
-            active === "Experties" ? classes.active : null
-          }`}
-          onClick={() => fnActive("Experties")}
-        >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
-            <SurfingIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText className={`${classes.menuItem}`}>
-            Experties
-          </ListItemText>
-        </ListItem> */}
 
         <ListItem
           button
           className={`${classes.itemStyle} ${
-            active === "Experience" ? classes.active : null
+            active === "CLIENTS" ? classes.active : null
           }`}
-          onClick={() => fnActive("Experience")}
+          onClick={() => fnActive("CLIENTS")}
         >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
+          <ListItemIcon style={{ color: "#ff4105", minWidth: "35px" }}>
             <AcUnitIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText className={`${classes.menuItem}`}>
-            Experience
-          </ListItemText>
+          <ListItemText className={`${classes.menuItem}`}>CLIENTS</ListItemText>
         </ListItem>
         <ListItem
           button
           className={`${classes.itemStyle} ${
-            active === "My Works" ? classes.active : null
+            active === "SERVICES" ? classes.active : null
           }`}
-          onClick={() => fnActive("My Works")}
+          onClick={() => fnActive("SERVICES")}
         >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
+          <ListItemIcon style={{ color: "#ff4105", minWidth: "35px" }}>
             <GrainIcon fontSize="small" />
           </ListItemIcon>
           <ListItemText className={`${classes.menuItem}`}>
-            My Works
+            SERVICES
           </ListItemText>
         </ListItem>
+
         <ListItem
           button
           className={`${classes.itemStyle} ${
-            active === "Education" ? classes.active : null
+            active === "CONTACT" ? classes.active : null
           }`}
-          onClick={() => fnActive("Education")}
+          onClick={() => fnActive("CONTACT")}
         >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
-            <SchoolIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText className={`${classes.menuItem}`}>
-            Education
-          </ListItemText>
-        </ListItem>
-        <ListItem
-          button
-          className={`${classes.itemStyle} ${
-            active === "Contact" ? classes.active : null
-          }`}
-          onClick={() => fnActive("Contact")}
-        >
-          <ListItemIcon style={{ color: "darkcyan", minWidth: "35px" }}>
+          <ListItemIcon style={{ color: "#ff4105", minWidth: "35px" }}>
             <ContactsIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText className={`${classes.menuItem}`}>Contact</ListItemText>
+          <ListItemText className={`${classes.menuItem}`}>CONTACT</ListItemText>
         </ListItem>
       </List>
     </Box>
@@ -192,11 +159,11 @@ export default function NavbarDrawer({ openDrawer, fnActive, active }) {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
-            PaperProps={{
-              sx: {
-                backgroundColor: "#061A38",
-              },
-            }}
+            // PaperProps={{
+            //   sx: {
+            //     backgroundColor: "#061A38",
+            //   },
+            // }}
           >
             {list(anchor)}
           </SwipeableDrawer>

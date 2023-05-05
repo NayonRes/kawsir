@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
     textAlign: "center",
     [theme.breakpoints.down("sm")]: {
-      width: "60px",
+      width: "80px",
     },
   },
   cardTitle: {
@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#061A38",
     [theme.breakpoints.down("sm")]: {
       fontSize: "7px",
+      margin: "8px 0 8px 0",
     },
   },
   cardImage: {
@@ -60,15 +61,15 @@ const useStyles = makeStyles((theme) => ({
 const WhatIKnow = () => {
   const classes = useStyles();
   const data = [
-    { img: AppleGadgets, name: "Apple Gadgets Ltd." },
+    { img: AppleGadgets, name: "Apple Gadgets Ltd" },
     { img: BangladeshAirForce, name: "Bangladesh Air Force" },
-    { img: CDVision, name: "CD Vision." },
-    { img: ChitronInterior, name: "Chitron Interior." },
-    { img: HashtagPizza, name: "Hashtag Pizza." },
-    { img: InBs, name: "InBs Ltd." },
-    { img: NaveedMahbub, name: "Naveed Mahbub Show." },
-    { img: OceanAngelFreight, name: "Ocean Angel Freight Ltd." },
-    { img: RahimSteel, name: "Rahim Steel." },
+    { img: CDVision, name: "CD Vision" },
+    { img: ChitronInterior, name: "Chitron Interior" },
+    { img: HashtagPizza, name: "Hashtag Pizza" },
+    { img: InBs, name: "InBs Ltd" },
+    { img: NaveedMahbub, name: "Naveed Mahbub Show" },
+    { img: OceanAngelFreight, name: "Ocean Angel Freight Ltd" },
+    { img: RahimSteel, name: "Rahim Steel" },
   ];
   const settings = {
     className: "center",
